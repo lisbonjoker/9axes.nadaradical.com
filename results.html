@@ -114,6 +114,10 @@
             <p class="summary-meta">Semelhança ideológica: <span id="ideology-similarity"></span></p>
         </article>
     </div>
+    <div class="nearby-parties" aria-label="Próximos partidos">
+        <h3 class="summary-card-title nearby-parties-title">Outros partidos próximos</h3>
+        <ul class="nearby-parties-list" id="nearby-parties-list"></ul>
+    </div>
 </section>
 <hr/>
 <canvas style="display: none" id="banner" width=800 height=1380 style="font-family:Montserrat"></canvas>
@@ -341,15 +345,21 @@
         cult: i
     }
 	
-    party = ""
-    partydist = Infinity
+    var rankedParties = []
     for (var pari = 0; pari < parties.length; pari++) {
         dist = vectorDistance(parties[pari].stats, userStats)
-        if (dist < partydist) {
-            party = parties[pari].name
-            partydist = dist
-        }
+        rankedParties.push({
+            name: parties[pari].name,
+            distance: dist,
+            similarity: similarityFromDistance(dist)
+        })
     }
+    rankedParties.sort(function(first, second) {
+        return first.distance - second.distance
+    })
+
+    party = rankedParties[0].name
+    partydist = rankedParties[0].distance
 
     ideology = ""
     ideologyDist = Infinity
@@ -368,6 +378,21 @@
 	document.getElementById("party-similarity").innerHTML = partySimilarityText
     document.getElementById("ideology-label").innerHTML = ideology
     document.getElementById("ideology-similarity").innerHTML = ideologySimilarityText
+
+    var nearbyPartiesList = document.getElementById("nearby-parties-list")
+    var nearbyParties = rankedParties.slice(1, 4)
+    for (var np = 0; np < nearbyParties.length; np++) {
+        var partyItem = document.createElement("li")
+        var nearbyName = document.createElement("span")
+        nearbyName.className = "nearby-party-name"
+        nearbyName.textContent = nearbyParties[np].name
+        var nearbySimilarity = document.createElement("span")
+        nearbySimilarity.className = "nearby-party-similarity"
+        nearbySimilarity.textContent = nearbyParties[np].similarity + "%"
+        partyItem.appendChild(nearbyName)
+        partyItem.appendChild(nearbySimilarity)
+        nearbyPartiesList.appendChild(partyItem)
+    }
 
     function createImage(src, x, y, w, h) {
         img = new Image ()
