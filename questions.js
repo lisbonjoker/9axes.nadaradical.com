@@ -83,44 +83,44 @@ questions =
             { question: "Um governo forte não deve depender da opinião pública.", weight: 2 }
         ]],[//Globalista-Isolacionista
         [//4
-            { question: "A integração internacional é essencial para o futuro da humanidade.", weight: 2 },
-            { question: "As instituições internacionais deveriam ter mais poder para resolver problemas globais.", weight: 2 },
-            { question: "Os países devem cooperar cada vez mais para enfrentar desafios globais.", weight: 2 }
+            { question: "O país deve ceder parte da sua soberania a instituições internacionais.", weight: 2 },
+            { question: "Decisões internacionais devem ter prioridade sobre decisões nacionais em certas áreas.", weight: 2 },
+            { question: "Organizações internacionais devem ter autoridade para impor regras aos países.", weight: 2 }
         ],
         [//3
-            { question: "A União Europeia deveria ter mais competências políticas.", weight: 1.5 },
-            { question: "A cooperação internacional é essencial para resolver problemas globais.", weight: 1.5 },
-            { question: "Portugal deve participar ativamente em organizações internacionais.", weight: 1.5 }
+            { question: "A União Europeia deveria ter mais poder político sobre os Estados-membros.", weight: 1.5 },
+            { question: "Os países devem aceitar limitações à sua soberania para cooperação internacional.", weight: 1.5 },
+            { question: "A integração política internacional deve ser aprofundada.", weight: 1.5 }
         ],
         [//2
-            { question: "Portugal beneficia por fazer parte da União Europeia.", weight: 1.2 },
-            { question: "O comércio internacional traz benefícios para todos os países.", weight: 1.2 },
-            { question: "A cooperação entre nações promove estabilidade e prosperidade.", weight: 1.2 }
+            { question: "A globalização económica traz mais benefícios do que riscos.", weight: 1.2 },
+            { question: "O país deve depender do comércio internacional para prosperar.", weight: 1.2 },
+            { question: "A cooperação internacional deve ser priorizada sobre decisões unilaterais.", weight: 1.2 }
         ],
         [//1
-            { question: "Alianças internacionais ajudam a proteger os interesses nacionais.", weight: 0.8 },
-            { question: "A diplomacia internacional é importante para manter a paz.", weight: 0.8 },
-            { question: "Os países devem trabalhar juntos quando têm interesses comuns.", weight: 0.8 }
+            { question: "O comércio internacional deve ser incentivado.", weight: 0.8 },
+            { question: "O país deve participar em organizações internacionais.", weight: 0.8 },
+            { question: "A diplomacia deve ser preferida a ações unilaterais.", weight: 0.8 }
         ],
         [//-1
             { question: "A soberania nacional deve ter prioridade sobre decisões internacionais.", weight: 0.8 },
-            { question: "Portugal deve proteger os seus interesses nacionais antes de compromissos internacionais.", weight: 0.8 },
-            { question: "Algumas decisões importantes devem ser tomadas apenas a nível nacional.", weight: 0.8 }
+            { question: "O país deve proteger os seus interesses mesmo contra pressão internacional.", weight: 0.8 },
+            { question: "Algumas decisões devem ser tomadas apenas a nível nacional.", weight: 0.8 }
         ],
         [//-2
             { question: "A União Europeia tem demasiado poder sobre os países membros.", weight: 1.2 },
-            { question: "Portugal deveria ter mais independência em relação a organizações internacionais.", weight: 1.2 },
-            { question: "A globalização tem prejudicado a soberania dos países.", weight: 1.2 }
+            { question: "O país deveria reduzir a sua dependência de organizações internacionais.", weight: 1.2 },
+            { question: "A globalização prejudica a independência nacional.", weight: 1.2 }
         ],
         [//-3
-            { question: "Portugal deve evitar envolver-se demasiado em assuntos internacionais.", weight: 1.5 },
-            { question: "As organizações internacionais interferem demasiado na política nacional.", weight: 1.5 },
-            { question: "Cada país deve resolver os seus próprios problemas sem interferência externa.", weight: 1.5 }
+            { question: "O país deve evitar envolver-se em conflitos e acordos internacionais.", weight: 1.5 },
+            { question: "Organizações internacionais interferem demasiado na política nacional.", weight: 1.5 },
+            { question: "Cada país deve resolver os seus problemas sem influência externa.", weight: 1.5 }
         ],
         [//-4
-            { question: "As alianças internacionais limitam a independência dos países.", weight: 2 },
-            { question: "Portugal deveria afastar-se de organizações internacionais.", weight: 2 },
-            { question: "Os países devem evitar compromissos internacionais que limitem a sua soberania.", weight: 2 }
+            { question: "O país deve sair de organizações internacionais que limitem a sua soberania.", weight: 2 },
+            { question: "A independência nacional é mais importante do que cooperação internacional.", weight: 2 },
+            { question: "O país deve evitar compromissos internacionais mesmo com custos económicos.", weight: 2 }
         ]],[//Militarista-Pacifista
         [//4
             { question: "Portugal deve aumentar significativamente o orçamento das Forças Armadas.", weight: 2 },
@@ -163,44 +163,44 @@ questions =
             { question: "Os países deveriam abolir os seus exércitos permanentes.", weight: 2 }
         ]],[//Segurança-Liberdade
         [//4
-            { question: "O Governo deve poder monitorizar comunicações para prevenir terrorismo.", weight: 2 },
-            { question: "Câmaras de vigilância devem ser amplamente usadas nas cidades.", weight: 2 },
-            { question: "A segurança pública deve ter prioridade sobre a privacidade.", weight: 2 }
+            { question: "O Governo deve poder monitorizar comunicações mesmo sem mandado em situações de risco.", weight: 2 },
+            { question: "Câmaras de vigilância devem ser amplamente usadas mesmo com impacto na privacidade.", weight: 2 },
+            { question: "A segurança pública deve prevalecer mesmo que reduza liberdades individuais.", weight: 2 }
         ],
         [//3
-            { question: "A polícia precisa de mais poderes para combater o crime.", weight: 1.5 },
-            { question: "O Estado deve poder recolher dados digitais para investigações.", weight: 1.5 },
-            { question: "A vigilância estatal pode ser necessária para garantir segurança.", weight: 1.5 }
+            { question: "A polícia deve ter poderes alargados mesmo com menor controlo judicial.", weight: 1.5 },
+            { question: "O Estado deve poder recolher dados digitais preventivamente.", weight: 1.5 },
+            { question: "Medidas de vigilância são justificadas mesmo sem suspeita individual.", weight: 1.5 }
         ],
         [//2
-            { question: "Algumas liberdades devem ser limitadas para manter a ordem pública.", weight: 1.2 },
-            { question: "A polícia deve ter mais autoridade para combater criminalidade.", weight: 1.2 },
-            { question: "A segurança da sociedade é mais importante do que certas liberdades individuais.", weight: 1.2 }
+            { question: "Algumas liberdades devem ser limitadas para reduzir riscos de crime.", weight: 1.2 },
+            { question: "A polícia deve ter maior margem de atuação mesmo com menos garantias legais.", weight: 1.2 },
+            { question: "A segurança coletiva pode justificar restrições a direitos individuais.", weight: 1.2 }
         ],
         [//1
-            { question: "Alguma vigilância governamental é aceitável para manter segurança.", weight: 1 },
-            { question: "A polícia deve ter ferramentas modernas para combater o crime.", weight: 1 },
-            { question: "A liberdade absoluta pode tornar uma sociedade perigosa.", weight: 1 }
+            { question: "Alguma vigilância governamental é aceitável com supervisão.", weight: 1 },
+            { question: "Ferramentas de vigilância devem ser usadas com limites legais claros.", weight: 1 },
+            { question: "A liberdade deve ser equilibrada com necessidades de segurança.", weight: 1 }
         ],
         [//-1
-            { question: "O Estado não deve interferir na vida privada sem forte justificação.", weight: 1 },
-            { question: "A liberdade individual deve ser uma prioridade política.", weight: 1 },
-            { question: "A privacidade dos cidadãos deve ser protegida.", weight: 1 }
+            { question: "O Estado deve precisar de forte justificação legal para interferir na privacidade.", weight: 1 },
+            { question: "A liberdade individual deve ser protegida mesmo com algum risco adicional.", weight: 1 },
+            { question: "A privacidade deve ser um princípio fundamental nas políticas públicas.", weight: 1 }
         ],
         [//-2
-            { question: "O reconhecimento facial pelo Estado deve ser proibido.", weight: 1.3 },
-            { question: "A polícia deve ser mais controlada por mecanismos independentes.", weight: 1.3 },
-            { question: "A vigilância estatal ameaça as liberdades individuais.", weight: 1.3 }
+            { question: "O reconhecimento facial pelo Estado deve ser proibido mesmo para segurança.", weight: 1.3 },
+            { question: "A polícia deve ser fortemente limitada por mecanismos independentes.", weight: 1.3 },
+            { question: "A vigilância estatal tende a abusos e deve ser restringida.", weight: 1.3 }
         ],
         [//-3
-            { question: "O Governo não deve recolher dados pessoais em massa.", weight: 1.6 },
-            { question: "A privacidade digital deve ser fortemente protegida.", weight: 1.6 },
-            { question: "A polícia tem demasiado poder na sociedade moderna.", weight: 1.6 }
+            { question: "O Governo não deve recolher dados pessoais em massa em nenhuma circunstância.", weight: 1.6 },
+            { question: "A privacidade digital deve ser protegida mesmo que dificulte investigações.", weight: 1.6 },
+            { question: "O poder policial deve ser significativamente reduzido.", weight: 1.6 }
         ],
         [//-4
-            { question: "A vigilância estatal nunca deve ser permitida.", weight: 2 },
-            { question: "A existência do Estado representa um risco para a liberdade individual.", weight: 2 },
-            { question: "A liberdade individual deve ser praticamente ilimitada.", weight: 2 }
+            { question: "A vigilância estatal nunca deve ser permitida sob qualquer circunstância.", weight: 2 },
+            { question: "O Estado é uma ameaça estrutural à liberdade individual.", weight: 2 },
+            { question: "A liberdade individual deve prevalecer quase sem limitações.", weight: 2 }
         ]],[//Intervencionismo-Livre_Mercado
         [//4
             { question: "O Estado deve controlar os preços da habitação para garantir casas acessíveis.", weight: 2 },
