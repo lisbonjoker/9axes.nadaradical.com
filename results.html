@@ -114,6 +114,11 @@
             <p class="summary-meta">Semelhança ideológica: <span id="ideology-similarity"></span></p>
         </article>
     </div>
+    <div class="nearby-parties" aria-label="Próximos partidos">
+        <h3 class="summary-card-title nearby-parties-title">Todos os partidos por proximidade</h3>
+        <ul class="nearby-parties-list" id="nearby-parties-list"></ul>
+        <button class="nearby-parties-toggle" id="nearby-parties-toggle" type="button" hidden>Mostrar mais</button>
+    </div>
 </section>
 <hr/>
 <canvas style="display: none" id="banner" width=800 height=1380 style="font-family:Montserrat"></canvas>
@@ -341,15 +346,21 @@
         cult: i
     }
 	
-    party = ""
-    partydist = Infinity
+    var rankedParties = []
     for (var pari = 0; pari < parties.length; pari++) {
         dist = vectorDistance(parties[pari].stats, userStats)
-        if (dist < partydist) {
-            party = parties[pari].name
-            partydist = dist
-        }
+        rankedParties.push({
+            name: parties[pari].name,
+            distance: dist,
+            similarity: similarityFromDistance(dist)
+        })
     }
+    rankedParties.sort(function(first, second) {
+        return first.distance - second.distance
+    })
+
+    party = rankedParties[0].name
+    partydist = rankedParties[0].distance
 
     ideology = ""
     ideologyDist = Infinity
@@ -368,6 +379,60 @@
 	document.getElementById("party-similarity").innerHTML = partySimilarityText
     document.getElementById("ideology-label").innerHTML = ideology
     document.getElementById("ideology-similarity").innerHTML = ideologySimilarityText
+
+    var nearbyPartiesList = document.getElementById("nearby-parties-list")
+    var nearbyPartiesToggle = document.getElementById("nearby-parties-toggle")
+    var nearbyParties = rankedParties.slice(1)
+    var isNearbyExpanded = false
+
+    for (var np = 0; np < nearbyParties.length; np++) {
+        var partyItem = document.createElement("li")
+        if (np >= 3) {
+            partyItem.classList.add("nearby-party-hidden")
+        }
+
+        var partyRank = document.createElement("span")
+        partyRank.className = "nearby-party-rank"
+        partyRank.textContent = (np + 2)
+
+        var partyInfo = document.createElement("div")
+        partyInfo.className = "nearby-party-info"
+
+        var nearbyName = document.createElement("span")
+        nearbyName.className = "nearby-party-name"
+        nearbyName.textContent = nearbyParties[np].name
+
+        var nearbyBar = document.createElement("div")
+        nearbyBar.className = "nearby-party-bar"
+        var nearbyBarFill = document.createElement("div")
+        nearbyBarFill.className = "nearby-party-bar-fill"
+        nearbyBarFill.style.width = nearbyParties[np].similarity + "%"
+        nearbyBar.appendChild(nearbyBarFill)
+
+        partyInfo.appendChild(nearbyName)
+        partyInfo.appendChild(nearbyBar)
+
+        var nearbySimilarity = document.createElement("span")
+        nearbySimilarity.className = "nearby-party-similarity"
+        nearbySimilarity.textContent = nearbyParties[np].similarity + "%"
+
+        partyItem.appendChild(partyRank)
+        partyItem.appendChild(partyInfo)
+        partyItem.appendChild(nearbySimilarity)
+        nearbyPartiesList.appendChild(partyItem)
+    }
+
+    if (nearbyParties.length > 3) {
+        nearbyPartiesToggle.hidden = false
+        nearbyPartiesToggle.onclick = function() {
+            isNearbyExpanded = !isNearbyExpanded
+            var hiddenItems = nearbyPartiesList.querySelectorAll(".nearby-party-hidden")
+            for (var hi = 0; hi < hiddenItems.length; hi++) {
+                hiddenItems[hi].style.display = isNearbyExpanded ? "grid" : "none"
+            }
+            nearbyPartiesToggle.textContent = isNearbyExpanded ? "Mostrar menos" : "Mostrar mais"
+        }
+    }
 
     function createImage(src, x, y, w, h) {
         img = new Image ()
